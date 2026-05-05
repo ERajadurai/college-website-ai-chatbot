@@ -1,0 +1,89 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Scholarships - JVM Engineering College</title>
+  <link href="{% static 'vendor/bootstrap/css/bootstrap.min.css' %}" rel="stylesheet">
+  <style>
+    body { font-family: 'Poppins', sans-serif; background: #f5f7fa; }
+    .hero { background: #0B1B3A; color: white; padding: 60px 0; text-align: center; }
+    .hero h1 { font-size: 2.5rem; font-weight: 700; }
+    .hero p { opacity: 0.8; }
+    .section { padding: 50px 0; }
+    .schol-card {
+      background: white; border-radius: 12px;
+      padding: 30px; margin-bottom: 25px;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+      border-left: 5px solid #0B1B3A;
+    }
+    .schol-card h4 { color: #0B1B3A; font-weight: 700; margin-bottom: 15px; }
+    .schol-card ul { padding-left: 20px; }
+    .schol-card ul li { margin-bottom: 8px; color: #444; }
+    .back-btn {
+      background: #0B1B3A; color: white;
+      padding: 10px 25px; border-radius: 8px;
+      text-decoration: none; display: inline-block; margin-bottom: 30px;
+    }
+    .back-btn:hover { background: #1a3a6e; color: white; }
+  </style>
+</head>
+<body>
+
+  <div class="hero">
+    <h1>🎓 Scholarships</h1>
+    <p>Financial support for deserving students at JVM Engineering College</p>
+  </div>
+
+  <div class="section">
+    <div class="container">
+      <a href="/" class="back-btn">← Back to Home</a>
+
+      <div class="schol-card">
+        <h4>🏛️ Central Government Scholarship</h4>
+        <ul>
+          <li>National Scholarship Portal (NSP)</li>
+          <li>Central Sector Scholarship Scheme for BC & MBC</li>
+          <li>Minority Scholarship for BC-Muslims & BC-Christians</li>
+        </ul>
+      </div>
+
+      <div class="schol-card">
+        <h4>🏢 State Government Scholarship</h4>
+        <ul>
+          <li>Adi Dravidar Welfare Association – SC/ST/SCC (BC-Converted Christian)</li>
+          <li>Pudhumai Penn Thittam (Students from Govt/Aided Schools, 6th–12th)</li>
+        </ul>
+      </div>
+
+      <div class="schol-card">
+        <h4>🎖️ Management Scholarship – Shri Krishnaswamy Educational Trust</h4>
+        <ul>
+          <li>FREE EDUCATION to one student from Neikuppi Village</li>
+          <li>Fees Concession for Meritorious Students</li>
+          <li>Fees Concession for Siblings & SKC Alumni pursuing PG</li>
+          <li>25% fee concession – State Level Sports Players</li>
+          <li>50% fee concession – National Level Sports Players</li>
+          <li>75% fee concession – International Level Sports Players</li>
+        </ul>
+      </div>
+
+      <div class="schol-card">
+        <h4>💼 Private Scholarship</h4>
+        <ul>
+          <li>MVD (Maharani Vidyavathi Devi Vzhilanagram Trust)</li>
+          <li>Lion's Club</li>
+          <li>Anna Nagar Ladies Club</li>
+          <li>Disha Scholarship</li>
+          <li>Shyam Kothari Foundation</li>
+          <li>Vedicology Foundation</li>
+          <li>Jindal Scholarship</li>
+          <li>Team Everest Scholarship</li>
+        </ul>
+      </div>
+
+    </div>
+  </div>
+
+</body>
+</html>

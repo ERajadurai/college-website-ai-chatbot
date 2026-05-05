@@ -1,0 +1,116 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>{{ event.title }} - JVM Engineering College</title>
+  <link href="{% static 'vendor/bootstrap/css/bootstrap.min.css' %}" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Poppins:400,600,700" rel="stylesheet">
+  <style>
+    body { font-family: 'Poppins', sans-serif; background: #f4f6fb; margin: 0; }
+
+    .detail-header {
+      background: #0B1B3A;
+      color: #fff;
+      padding: 18px 40px;
+      font-size: 1.3rem;
+      font-weight: 700;
+      letter-spacing: 1px;
+    }
+
+    .detail-wrap {
+      max-width: 780px;
+      margin: 50px auto;
+      background: #fff;
+      border-radius: 14px;
+      overflow: hidden;
+      box-shadow: 0 6px 30px rgba(0,0,0,0.10);
+    }
+
+    /* Big poster image */
+    .detail-img {
+      width: 100%;
+      max-height: 480px;
+      object-fit: contain;
+      background: #111;
+      display: block;
+    }
+
+    .detail-body {
+      padding: 32px 36px;
+    }
+
+    .detail-title {
+      font-size: 1.8rem;
+      font-weight: 700;
+      color: #0B1B3A;
+      margin-bottom: 14px;
+    }
+
+    .detail-meta {
+      display: flex;
+      gap: 24px;
+      flex-wrap: wrap;
+      background: #f0f4ff;
+      border-radius: 8px;
+      padding: 14px 18px;
+      margin-bottom: 22px;
+      font-size: 0.95rem;
+      color: #444;
+    }
+
+    .detail-meta span b { color: #0B1B3A; }
+
+    .detail-desc {
+      font-size: 1rem;
+      color: #555;
+      line-height: 1.9;
+      margin-bottom: 28px;
+    }
+
+    .back-btn {
+      display: inline-block;
+      background: #0B1B3A;
+      color: #fff;
+      padding: 11px 28px;
+      border-radius: 7px;
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 0.95rem;
+      transition: background 0.2s;
+    }
+
+    .back-btn:hover { background: #1a3a6e; color: #fff; }
+  </style>
+</head>
+<body>
+
+  <!-- Top bar -->
+  <div class="detail-header">JVM ENGINEERING COLLEGE</div>
+
+  <div class="detail-wrap">
+
+    <!-- Event Poster Image — peria-a show aagum -->
+    <img class="detail-img"
+         src="{% static event.image %}"
+         alt="{{ event.title }}">
+
+    <div class="detail-body">
+      <h1 class="detail-title">{{ event.title }}</h1>
+
+      <div class="detail-meta">
+        <span>📅 <b>Date:</b> {{ event.date }}</span>
+        <span>⏰ <b>Time:</b> {{ event.time }}</span>
+        <span>📍 <b>Venue:</b> {{ event.venue }}</span>
+      </div>
+
+      <p class="detail-desc">{{ event.description }}</p>
+
+      <!-- Same tab-la back varum -->
+      <a href="/" class="back-btn">← Back to Home</a>
+    </div>
+
+  </div>
+
+</body>
+</html>

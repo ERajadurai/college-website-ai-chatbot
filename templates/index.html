@@ -1,0 +1,664 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="">
+  <meta name="author" content="TemplateMo">
+  <link href="https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900" rel="stylesheet">
+
+  <title> Shri Krishnaswamy college for women </title>
+
+  <!-- Bootstrap core CSS -->
+  <link href="{% static 'vendor/bootstrap/css/bootstrap.min.css' %}" rel="stylesheet">
+
+  <!-- Additional CSS Files -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link rel="stylesheet" href="{% static 'assets/css/fontawesome.css' %}">
+  <link rel="stylesheet" href="{% static 'assets/css/templatemo-edu-meeting.css' %}">
+  <link rel="stylesheet" href="{% static 'assets/css/owl.css' %}">
+  <link rel="stylesheet" href="{% static 'assets/css/lightbox.css' %}">
+  <link rel="stylesheet" href="{% static 'assets/css/home.css' %}">
+  <link rel="stylesheet" href="{% static 'assets/css/chatbot.css' %}">
+<link rel="stylesheet" href="{% static 'assets/css/flexslider.css' %}">
+
+
+  <!-- Banner Image CSS (video removed) -->
+  <style>
+    .main-banner-image img{
+      width: 100%;
+      height: 100vh;
+      object-fit: cover;
+    }
+    .owl-service-item .item {
+    background: transparent !important;
+    border: none !important;
+    box-shadow: none !important;
+    padding: 5px !important;
+  }
+
+  .owl-service-item .item img {
+    width: 100% !important;
+    height: 250px !important;
+    object-fit: cover !important;
+    border-radius: 10px !important;
+  }
+  </style>
+</head>
+
+<body>
+
+  <!-- Sub Header -->
+  <div class="sub-header">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-8 col-sm-8">
+          <div class="left-content">
+          </div>
+        </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ***** Header Area Start ***** -->
+  <header class="header-area header-sticky">
+    <div class="container">
+      <div class="row">
+        <div class="col-12">
+<nav class="main-nav">
+  <!-- Logo Left -->
+  <a href="/" class="logo">Shri Krishnaswamy college for women</a>
+
+  <!-- Menu Right -->
+  <ul class="nav">
+    <li class="scroll-to-section"><a href="#top" class="active">Home</a></li>
+    <li class="scroll-to-section"><a href="#courses">Courses</a></li>
+    <li class="scroll-to-section"><a href="#contact">Contact Us</a></li>
+  </ul>
+
+  <a class="menu-trigger"><span>Menu</span></a>
+</nav>
+
+<!-- ✅ Banner should be OUTSIDE nav -->
+<div class="marquee">
+  <p>📢 Admissions Open 2026 | 🎓 New Courses Available | 📌 Placement Updates | 🏫 JVM Engineering College</p>
+</div>
+        </div>
+      </div>
+    </div>
+  </header>
+  <!-- ***** Header Area End ***** -->
+<!-- ===== Running Banner TOP ===== -->
+
+
+  <!-- ***** Main Banner Area Start ***** -->
+<!-- ===== HERO SECTION (Reference Image Style) ===== -->
+<section class="section main-banner" id="top" data-section="section1">
+
+  <!-- ✅ VIDEO BACKGROUND -->
+  {% comment %} <video autoplay muted loop playsinline id="bg-video">
+    <source src="{% static 'assets/images/course-video.mp4' %}" type="video/mp4" />
+  </video> {% endcomment %}
+
+  <!-- ✅ IMAGE BACKGROUND -->
+  <img id="bg-image" src="{% static 'assets/images/college25.jpg' %}" alt="Background Image"
+    style="position:absolute; top:0; left:0; width:100%; height:100%; object-fit:cover; z-index:0; display:block;">
+
+  <!-- ✅ Overlay content -->
+  <div class="home-hero">
+    <div class="hero-overlay">
+      <div class="container">
+        <div class="row align-items-center">
+
+          <!-- Left hero text -->
+          <div class="col-lg-8">
+            <div class="hero-text">
+              <h1>Welcome to Our College</h1>
+              <p>Discover Your Path to Success</p>
+              <a class="btn hero-btn" href="#contact">Learn More</a>
+            </div>
+          </div>
+              </div>
+            </div>
+          </div>
+
+        </div> <!-- row -->
+      </div> <!-- container -->
+    </div>
+  </div>
+</section>
+
+<section class="home-info">
+  <div class="container">
+    <div class="row g-3">
+
+      <!-- Column 1: Upcoming Events -->
+      <div class="col-lg-4">
+        <div class="info-box">
+          <h4>Upcoming Events</h4>
+
+          {% for event in events %}
+          <div class="info-row" style="padding:8px 0;border-bottom:1px solid #eee;">
+            <a href="/event/{{ event.id }}/"
+               style="color:#0B1B3A;font-weight:600;text-decoration:none;">
+              {{ event.title }}
+            </a>
+            <span style="color:#888;font-size:0.85rem;">
+              {{ event.date }}
+            </span>
+          </div>
+          {% endfor %}
+
+          <a class="info-link" href="/event/1/">View All Events</a>
+        </div>
+      </div>
+
+      <!-- Column 2: Latest News -->
+      <div class="col-lg-4">
+  <div class="info-box">
+    <h4>Scholarships</h4>
+    <div class="info-row">
+      <span>Government Scholarship</span>
+    </div>
+    <div class="info-row">
+      <span>Management Scholarship</span>
+    </div>
+    <div class="info-row">
+      <span>Private Scholarship</span>
+    </div>
+    <a class="info-link" href="/scholarship/">View Scholarships</a>
+  </div>
+</div>
+
+<!-- Column 3: Virtual Campus Tour -->
+<div class="col-lg-4">
+  <div class="info-box" style="padding:0;overflow:hidden;border-radius:12px;">
+    <h4 style="padding:15px 15px 10px;">Virtual Campus Tour</h4>
+
+    <!-- ✅ Thumbnail click → popup -->
+    <div onclick="document.getElementById('videoModal').style.display='flex'"
+         style="position:relative;cursor:pointer;">
+      <video style="width:100%;height:200px;object-fit:cover;pointer-events:none;">
+        <source src="{% static 'assets/images/college.mp4' %}" type="video/mp4">
+      </video>
+      <div style="position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);
+                  background:rgba(0,0,0,0.7);border-radius:50%;
+                  width:60px;height:60px;display:flex;align-items:center;justify-content:center;">
+        <span style="color:white;font-size:24px;">▶</span>
+      </div>
+    </div>
+    <p style="padding:10px 15px;color:#666;font-size:0.85rem;">Take a Video Tour of Our Beautiful Campus</p>
+  </div>
+</div>
+
+<!-- ✅ VIDEO POPUP MODAL -->
+<div id="videoModal"
+     style="display:none;position:fixed;top:0;left:0;width:100%;height:100%;
+            background:rgba(0,0,0,0.85);z-index:9999;
+            align-items:center;justify-content:center;">
+
+  <!-- Close Button -->
+  <span onclick="
+    document.getElementById('videoModal').style.display='none';
+    document.getElementById('campusVideo').pause();"
+    style="position:absolute;top:20px;right:30px;color:white;
+           font-size:40px;cursor:pointer;font-weight:bold;">✖</span>
+
+  <!-- Video -->
+  <div style="width:95%;max-width:1100px;">
+    <video id="campusVideo" controls autoplay
+           style="width:100%;border-radius:10px;">
+      <source src="{% static 'assets/images/college.mp4' %}" type="video/mp4">
+    </video>
+  </div>
+</div>
+  <!-- ***** Main Banner Area End ***** -->
+
+<section class="services">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-12">
+        <div class="owl-service-item owl-carousel">
+
+          <div class="item">
+            <img src="{% static 'assets/images/placement.jpg' %}"
+                 style="width:100%;height:250px;object-fit:cover;border-radius:10px;" alt="">
+          </div>
+
+          <div class="item">
+            <img src="{% static 'assets/images/image2.jpeg' %}"
+                 style="width:100%;height:250px;object-fit:cover;border-radius:10px;" alt="">
+          </div>
+
+          <div class="item">
+            <img src="{% static 'assets/images/image 3.jpg' %}"
+                 style="width:100%;height:250px;object-fit:cover;border-radius:10px;" alt="">
+          </div>
+
+          <div class="item">
+            <img src="{% static 'assets/images/onam.jpeg' %}"
+                 style="width:100%;height:250px;object-fit:cover;border-radius:10px;" alt="">
+          </div>
+
+          <div class="item">
+            <img src="{% static 'assets/images/pongal.jpeg' %}"
+                 style="width:100%;height:250px;object-fit:cover;border-radius:10px;" alt="">
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</section><br>
+
+  <section class="upcoming-meetings" id="meetings">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-12">
+          <div class="section-heading">
+            <h2>Upcoming Meetings</h2>
+          </div>
+        </div>
+        <div class="col-lg-4">
+          <div class="categories">
+          <h4>Placement & Career Categories</h4>
+
+<ul>
+  <li><a href="#">Top Recruiters & Company Tie-Ups</a></li>
+  <li><a href="#">Latest Campus Drive Updates</a></li>
+  <li><a href="#">Internship Opportunities</a></li>
+  <li><a href="#">Resume & Skill Development Programs</a></li>
+  <li><a href="#">Placement Training & Career Guidance</a></li>
+</ul>
+            <div class="main-button-red">
+              <a href="#">All Upcoming Meetings</a>
+            </div>
+          </div>
+        </div>
+     
+
+        <div class="col-lg-8">
+          <div class="row">
+            <div class="col-lg-6">
+              <div class="meeting-item">
+                <div class="thumb">
+                  <div class="price"><span>RS.2000</span></div>
+                  <a href="#">
+                    <img src="{% static 'assets/images/meeting-01.jpg' %}" alt="New Lecturer Meeting">
+                  </a>
+                </div><br>
+                <div class="down-content">
+                  <div class="date"><h6>Nov <span>10</span></h6></div>
+                  <a href="#"><h4>New Lecturers Meeting</h4></a>
+                  <p>Join our lecturers meeting to discuss innovative teaching methods and academic development.</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-lg-6">
+              <div class="meeting-item">
+                <div class="thumb">
+                  <div class="price"><span>RS.3600</span></div>
+                  <a href="#">
+                    <img src="{% static 'assets/images/meeting-02.jpg' %}" alt="Online Teaching">
+                  </a>
+                </div><br>
+                <div class="down-content">
+                  <div class="date"><h6>Nov <span>24</span></h6></div>
+                  <a href="#"><h4>Online Teaching Techniques</h4></a>
+                   <p>Learn modern online teaching methods, digital tools, and interactive strategies for effective learning.</p>
+                </div>
+              </div>
+            </div>
+            {% comment %} <div class="running-banner"> {% endcomment %}
+
+            <div class="col-lg-6">
+              <div class="meeting-item">
+                <div class="thumb">
+                  <div class="price"><span>RS.1400</span></div>
+                  <a href="#">
+                    <img src="{% static 'assets/images/meeting-03.jpg' %}" alt="Higher Education">
+                  </a>
+                </div><br>
+                <div class="down-content">
+                  <div class="date"><h6>Nov <span>26</span></h6></div>
+                  <a href="#"><h4>Higher Education Conference</h4></a>
+                  <p>Participate in our conference to explore new trends, research, and innovations in higher education.</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-lg-6">
+              <div class="meeting-item">
+                <div class="thumb">
+                  <div class="price"><span>RS.4800</span></div>
+                  <a href="#">
+                    <img src="{% static 'assets/images/meeting-04.jpg' %}" alt="Student Training">
+                  </a>
+                </div><br>
+                <div class="down-content">
+                  <div class="date"><h6>Nov <span>30</span></h6></div>
+                  <a href="#"><h4>Student Training Meetup</h4></a>
+                   <p>Join this meetup to enhance your skills through training sessions, workshops, and career guidance.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- (Remaining sections are same, only static paths fixed where needed) -->
+
+  <section class="our-facts">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-6 align-self-center">
+          <div class="video">
+            <a href="https://www.youtube.com/watch?v=HndV87XpkWg" target="_blank">
+              <img src="{% static 'assets/images/play-icon.png' %}" alt="">
+            </a>
+          </div>
+        </div>
+           <!-- ✅ RIGHT SIDE CONTENT -->
+      <div class="col-lg-6">
+        <div class="video-content">
+
+          <h2>Virtual Campus Tour</h2>
+
+          <p>
+            Take a quick tour of JVM Engineering College and explore our modern campus,
+            innovative learning spaces, and student-friendly environment.
+          </p>
+
+          <ul>
+            <li>🎓 Industry-Oriented Programs</li>
+            <li>💼 Placement & Career Support</li>
+            <li>🏫 Smart Classrooms & Advanced Labs</li>
+          </ul>
+
+          <a href="#contact" class="main-btn">Explore More</a>
+
+        </div>
+      </div>
+      </div>
+    </div>
+  </section>
+
+<section id="courses" class="courses-section">
+  <div class="courses-container">
+
+
+  </div>
+</section>
+
+  <!-- ===== CONTACT SECTION ===== -->
+<!-- ===== CONTACT FOOTER (Same page) ===== -->
+<footer id="contact" class="contact-footer">
+  <div class="contact-wrap">
+    <div class="contact-col">
+      <h3>Contact Us</h3>
+      <div class="contact-brand">JVM Engineering College</div>
+
+      <p class="contact-line">Chennai Main Road,</p>
+      <p class="contact-line">Kumbakonam - 612501,</p>
+      <p class="contact-line">Thanjavur Dist, Tamil Nadu</p>
+
+      <p class="contact-strong">
+        Phone:
+        <a href="tel:+910000000000">+91 8956234752</a>
+      </p>
+
+      <p class="contact-strong">
+        Email:
+        <a href="mailto:info@jvmcollege.edu.in">jvmengineeringcollege.edu.in</a>
+      </p>
+    </div>
+
+    <div class="contact-col">
+      <h3>Quick Links</h3>
+      <ul class="contact-links">
+        <li><a href="#">Admission Procedure</a></li>
+        <li><a href="#">Feedback & Suggestions</a></li>
+        <li><a href="#">Conference & Events</a></li>
+        <li><a href="#">Placement Activities</a></li>
+        <li><a href="#">Students Grievances</a></li>
+        <li><a href="#">Alumni Association</a></li>
+        <li><a href="#">Campus Security Audit Report</a></li>
+      </ul>
+    </div>
+
+    <div class="contact-col">
+      <h3>Policies & Rules</h3>
+      <ul class="contact-links">
+        <li><a href="#">Anti-Ragging Policy</a></li>
+        <li><a href="#">Anti-Ragging Committee</a></li>
+        <li><a href="#">Grievance Committee</a></li>
+        <li><a href="#">SEC-4(1)(B) of RTI Act 2005</a></li>
+      </ul>
+    </div>
+
+    <div class="contact-col">
+      <h3>Social Connect</h3>
+      <div class="social-grid">
+        <a class="social-btn" href="#" aria-label="Facebook">f</a>
+        <a class="social-btn" href="#" aria-label="Twitter">x</a>
+        <a class="social-btn" href="#" aria-label="LinkedIn">in</a>
+        <a class="social-btn" href="#" aria-label="YouTube">yt</a>
+        <a class="social-btn ig" href="#" aria-label="Instagram">ig</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+  <!-- ===== AI CHATBOT FLOATING ICON ===== -->
+<div id="chatbot-icon" title="AI Assistant">
+  <svg class="bot-svg" viewBox="0 0 64 64" aria-hidden="true">
+    <!-- background circle -->
+    <circle cx="32" cy="32" r="30" fill="#0B1B3A"/>
+
+    <!-- sparkle dots -->
+    <circle cx="16" cy="20" r="1.4" fill="#38BDF8" opacity=".9"/>
+    <circle cx="50" cy="18" r="1.2" fill="#A5F3FC" opacity=".9"/>
+    <circle cx="52" cy="44" r="1.3" fill="#38BDF8" opacity=".7"/>
+
+    <!-- antenna -->
+    <line x1="32" y1="12" x2="32" y2="17" stroke="#E6F6FF" stroke-width="2" stroke-linecap="round"/>
+    <circle cx="32" cy="11" r="2.2" fill="#38BDF8"/>
+
+    <!-- head -->
+    <rect x="18" y="16" width="28" height="22" rx="11" fill="#F8FBFF"/>
+    <rect x="22" y="22" width="20" height="12" rx="6" fill="#0A1633"/>
+    <circle cx="28" cy="28" r="2.4" fill="#38BDF8"/>
+    <circle cx="36" cy="28" r="2.4" fill="#38BDF8"/>
+
+    <!-- neck -->
+    <rect x="29" y="38" width="6" height="4" rx="2" fill="#DDEEFF"/>
+
+    <!-- body -->
+    <rect x="20" y="41" width="24" height="14" rx="7" fill="#F8FBFF"/>
+    <rect x="26" y="45" width="12" height="6" rx="3" fill="#DDEEFF"/>
+
+    <!-- arms -->
+    <rect x="14" y="43" width="8" height="10" rx="4" fill="#F8FBFF"/>
+    <rect x="42" y="43" width="8" height="10" rx="4" fill="#F8FBFF"/>
+
+    <!-- legs -->
+    <rect x="24" y="55" width="7" height="6" rx="3" fill="#F8FBFF"/>
+    <rect x="33" y="55" width="7" height="6" rx="3" fill="#F8FBFF"/>
+
+    <!-- feet -->
+    <rect x="22" y="60" width="11" height="3" rx="1.5" fill="#DDEEFF"/>
+    <rect x="31" y="60" width="11" height="3" rx="1.5" fill="#DDEEFF"/>
+  </svg>
+</div>
+
+<!-- CHATBOT BOX -->
+<div id="chatbot-box">
+  <div id="chatbot-header">
+    <span>AI Chatbot</span>
+      <button id="close-btn" type="button">✖</button>
+  </div>
+
+  <!-- BODY FLEX -->
+  <div id="chatbot-content">
+
+    <!-- LEFT SIDEBAR -->
+    {% comment %} <div id="chatbot-sidebar">
+      <h4>Quick Info</h4>
+      <ul>
+        <li>SHIFT-I</li>
+        <li>UG COURSES</li>
+        <li>PG COURSES</li>
+        <li>SHIFT-II</li>
+        <li>CERTIFICATE COURSES</li>
+        <li>COLLEGE TIMING</li>
+        <li>FACILITIES</li>
+        <li>ATTENDANCE</li>
+        <li>FEES STRUCTURE</li>
+        <li>HOSTEL FEES</li>
+      </ul>
+    </div> {% endcomment %}
+
+    <!-- RIGHT CHAT AREA -->
+    <div id="chatbot-main">
+
+      <div id="chatbot-messages">
+        <div class="bot-msg">
+          Hi 👋 Welcome!To JVM ENGINEERING COLLEGE ! How can I help you?
+        </div>
+      </div>
+
+      <div id="chatbot-input-area">
+           <input id="user-input" type="text" placeholder="Type your message..." autocomplete="off" />
+        <button id="send-btn" type="button">Send</button>      </div>
+
+    </div>
+
+  </div>
+</div>
+
+  <!-- Scripts -->
+<script src="{% static 'vendor/jquery/jquery.min.js' %}"></script>
+<script src="{% static 'vendor/bootstrap/js/bootstrap.bundle.min.js' %}"></script>
+
+<script src="{% static 'assets/js/isotope.min.js' %}"></script>
+<script src="{% static 'assets/js/owl-carousel.js' %}"></script>
+<script src="{% static 'assets/js/lightbox.js' %}"></script>
+<script src="{% static 'assets/js/tabs.js' %}"></script>
+<script src="{% static 'assets/js/video.js' %}"></script>
+<script src="{% static 'assets/js/slick-slider.js' %}"></script>
+
+<!-- ================= CHATBOT SCRIPT ================= -->
+<script>
+  $(document).ready(function(){
+  $('.owl-service-item').owlCarousel({
+    items: 3,
+    loop: true,
+    autoplay: true,
+    autoplayTimeout: 3000,
+    margin: 20,
+    responsive: {
+      0: { items: 1 },
+      768: { items: 2 },
+      992: { items: 3 }
+    }
+  });
+});
+document.addEventListener("DOMContentLoaded", () => {
+  const icon     = document.getElementById("chatbot-icon");
+  const box      = document.getElementById("chatbot-box");
+  const closeBtn = document.getElementById("close-btn");
+  const sendBtn  = document.getElementById("send-btn");
+  const inputEl  = document.getElementById("user-input");
+  const messages = document.getElementById("chatbot-messages");
+
+  if (!icon || !box || !inputEl || !messages || !sendBtn || !closeBtn) {
+    console.log("Chatbot elements missing:", { icon, box, inputEl, messages, sendBtn, closeBtn });
+    return;
+  }
+
+  function openChat() {
+    box.classList.add("open");
+    setTimeout(() => inputEl.focus(), 50);
+  }
+  function closeChat() {
+    box.classList.remove("open");
+  }
+
+  // expose if you want
+  window.closeChat = closeChat;
+
+  // icon toggle
+  icon.addEventListener("click", (e) => {
+    e.stopPropagation();
+    box.classList.toggle("open");
+    if (box.classList.contains("open")) {
+      setTimeout(() => inputEl.focus(), 50);
+    }
+  });
+
+  // close button
+  closeBtn.addEventListener("click", (e) => {
+    e.stopPropagation();
+    closeChat();
+  });
+
+  // IMPORTANT: click inside box should NOT close
+  box.addEventListener("click", (e) => e.stopPropagation());
+
+  // outside click close
+  document.addEventListener("click", () => {
+    if (box.classList.contains("open")) closeChat();
+  });
+
+  // ENTER -> send
+  inputEl.addEventListener("keydown", (e) => {
+    if (e.key === "Enter") {
+      e.preventDefault();      // form submit stop
+      sendMessage();
+    }
+  });
+
+  // Send button click -> send
+  sendBtn.addEventListener("click", () => sendMessage());
+
+  function appendMsg(text, cls) {
+    const div = document.createElement("div");
+    div.className = cls;
+    div.innerText = text;
+    messages.appendChild(div);
+    messages.scrollTop = messages.scrollHeight;
+    return div;
+  }
+
+  function sendMessage(forcedText = null) {
+    const msg = (forcedText ?? inputEl.value).trim();
+    if (!msg) return;
+
+    appendMsg(msg, "user-msg");
+    const botDiv = appendMsg("Typing...", "bot-msg");
+
+    if (forcedText === null) inputEl.value = "";
+    inputEl.focus();
+
+    fetch(`/chatbot/?msg=${encodeURIComponent(msg)}`)
+      .then(r => r.json())
+      .then(data => {
+        botDiv.innerText = data.reply || "No response.";
+        messages.scrollTop = messages.scrollHeight;
+      })
+      .catch(() => {
+        botDiv.innerText = "Server error. Please try again.";
+      });
+  }
+
+  // if you want default open: openChat();
+});
+</script>
+</body>
+</html>

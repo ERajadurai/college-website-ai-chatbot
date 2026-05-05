@@ -1,0 +1,308 @@
+/* HERO */
+.home-hero{
+  min-height: 92vh;
+  background: url("../images/banner.jpg") center/cover no-repeat;
+  position: relative;
+}
+.hero-overlay{
+  min-height: 92vh;
+  background: rgba(0,0,0,.35);
+  display: flex;
+  align-items: center;
+  padding-top: 90px;
+}
+.hero-text h1{
+  color:#fff;
+  font-weight:800;
+  font-size: 56px;
+  line-height:1.05;
+}
+.hero-text p{
+  color:#e9eef7;
+  font-size: 22px;
+  margin-top: 10px;
+}
+.hero-btn{
+  background:#0b2b4f;
+  color:#fff;
+  padding:10px 22px;
+  border-radius: 10px;
+  font-weight:700;
+  margin-top: 14px;
+  display:inline-block;
+}
+
+/* CHAT PANEL */
+.chat-panel{
+  background:#fff;
+  border-radius: 14px;
+  overflow:hidden;
+  box-shadow: 0 14px 40px rgba(0,0,0,.28);
+}
+.chat-head{
+  background:#0b2b4f;
+  color:#fff;
+  padding: 12px 14px;
+  display:flex;
+  align-items:center;
+  justify-content: space-between;
+  font-weight:800;
+}
+.chat-body{ padding: 12px; background:#f3f6fb; }
+.chat-bubble{
+  background:#fff;
+  border-radius: 14px;
+  padding: 10px 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,.08);
+  margin-bottom: 12px;
+}
+.chat-quick button{
+  width:100%;
+  border:1px solid #e4e9f3;
+  background:#f7f9fd;
+  padding:10px 12px;
+  border-radius: 10px;
+  margin-bottom: 8px;
+  font-weight:700;
+  text-align:left;
+}
+.chat-input{
+  display:flex; gap:8px;
+  margin-top: 10px;
+}
+.chat-input input{
+  flex:1;
+  border:1px solid #e4e9f3;
+  border-radius: 10px;
+  padding: 10px 12px;
+}
+.chat-input button{
+  border:none;
+  background:#0b2b4f;
+  color:#fff;
+  border-radius: 10px;
+  padding:10px 16px;
+  font-weight:800;
+}
+
+/* CARDS */
+.home-cards{ padding: 18px 0; margin-top: -30px; }
+.home-card{
+  border-radius: 14px;
+  padding: 18px;
+  color:#fff;
+  min-height: 92px;
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  box-shadow: 0 10px 25px rgba(0,0,0,.18);
+}
+.card-1{ background: linear-gradient(90deg,#9a5b2a,#c58b45); }
+.card-2{ background: linear-gradient(90deg,#1f5f2a,#4a8f36); }
+.card-3{ background: linear-gradient(90deg,#0b2b4f,#1b5e86); }
+.home-card .card-title{ font-size: 20px; font-weight:900; }
+.home-card .card-sub{ opacity:.95; font-weight:600; }
+
+/* INFO */
+.home-info{ padding: 18px 0 40px; }
+.info-box{
+  background:#fff;
+  border-radius: 14px;
+  padding: 16px;
+  box-shadow: 0 10px 25px rgba(0,0,0,.10);
+}
+.info-box h4{ font-weight:900; margin-bottom: 12px; }
+.info-row{
+  display:flex;
+  justify-content:space-between;
+  padding: 8px 0;
+  border-bottom: 1px solid #eef2f7;
+}
+.info-link{ display:inline-block; margin-top: 10px; font-weight:800; color:#0b2b4f; }
+.mini{ font-weight:800; color:#0b2b4f; }
+
+/* TOUR */
+.tour-box{
+  border-radius: 14px;
+  min-height: 190px;
+  background: url("../images/tour.jpg") center/cover no-repeat;
+  overflow:hidden;
+  box-shadow: 0 10px 25px rgba(0,0,0,.10);
+}
+.tour-overlay{
+  height: 100%;
+  padding: 16px;
+  background: rgba(0,0,0,.45);
+  color:#fff;
+}
+.tour-btn{
+  background:#0b2b4f;
+  color:#fff;
+  padding:10px 18px;
+  border-radius: 10px;
+  font-weight:800;
+  display:inline-block;
+  margin-top: 10px;
+}
+/* CHATBOT ICON */
+#chatbot-icon {
+  position: fixed;
+  bottom: 25px;
+  right: 25px;
+  background: #0b2b4f;
+  color: white;
+  font-size: 28px;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  box-shadow: 0 8px 20px rgba(0,0,0,.3);
+  z-index: 9999;
+}
+
+/* CHATBOT BOX */
+#chatbot-box {
+  position: fixed;
+  bottom: 100px;
+  right: 25px;
+  width: 320px;
+  background: white;
+  border-radius: 14px;
+  box-shadow: 0 10px 30px rgba(0,0,0,.3);
+  display: none;
+  flex-direction: column;
+  overflow: hidden;
+  z-index: 9999;
+}
+
+/* HEADER */
+#chatbot-header {
+  background: #0b2b4f;
+  color: white;
+  padding: 12px;
+  display: flex;
+  justify-content: space-between;
+  font-weight: bold;
+}
+
+#chatbot-header button {
+  background: none;
+  border: none;
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+/* MESSAGES */
+#chatbot-messages {
+  height: 250px;
+  padding: 10px;
+  overflow-y: auto;
+  background: #f3f6fb;
+}
+
+.bot-msg {
+  background: white;
+  padding: 8px 12px;
+  border-radius: 12px;
+  margin-bottom: 8px;
+  width: fit-content;
+}
+
+.user-msg {
+  background: #0b2b4f;
+  color: white;
+  padding: 8px 12px;
+  border-radius: 12px;
+  margin-bottom: 8px;
+  margin-left: auto;
+  width: fit-content;
+}
+
+/* INPUT AREA */
+#chatbot-input-area {
+  display: flex;
+  border-top: 1px solid #ddd;
+}
+
+#chatbot-input-area input {
+  flex: 1;
+  border: none;
+  padding: 10px;
+}
+
+#chatbot-input-area button {
+  background: #0b2b4f;
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  cursor: pointer;
+#bg-image {
+  display: block;        /* ← இது gap fix பண்ணும் */
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  z-index: 0;
+}
+
+.main-banner {
+  position: relative;
+  width: 100%;
+  height: 300vh;
+  overflow: hidden;
+  padding: 0 !important;
+  margin: 0 !important;
+}
+
+.home-hero{
+  position: relative;
+  min-height: 100vh;
+  z-index: 1;
+}
+
+.hero-overlay{
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  background: rgba(0,0,0,0.55);
+}
+/* Chatbot box position கீழே வர */
+#chatbot-box {
+  position: fixed;
+  bottom: 40px;   /* icon மேல இருந்து கொஞ்சம் உயரம் */
+  right: 30px;
+
+  width: 340px;
+  height: 520px;   /* 🔥 box long ஆகும் */
+
+  display: flex;
+  flex-direction: column;
+
+  border-radius: 15px;
+  overflow: hidden;
+  z-index: 9999;
+}
+
+/* Messages area bigger ஆக */
+#chatbot-messages {
+  flex: 1;
+  padding: 15px;
+  overflow-y: auto;
+
+  height: 380px;   /* 🔥 chat screen long */
+}
+
+/* Input கீழே fixed */
+#chatbot-input-area {
+  display: flex;
+  border-top: 1px solid #ddd;
+  padding: 10px;
+  background: white;
+}
